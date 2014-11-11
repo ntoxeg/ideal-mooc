@@ -17,3 +17,14 @@ class Interaction(object):
 
     def __repr__(self):
         return self.label
+
+class InteractionV(Interaction):
+    """Interaction with valence
+    """
+    def __init__(self, _exp, _res, _val):
+        super().__init__(_exp, _res)
+        self.valence = _val
+
+    def __repr__(self):
+        return self.label + "," + self.valence
+    
