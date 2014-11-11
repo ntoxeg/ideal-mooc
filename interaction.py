@@ -5,9 +5,11 @@ class Experiment(object):
     def __equals__(self, other):
         return self.label == other.label
 
+
 class Result(object):
     def __init__(self, _label):
         self.label = _label
+
 
 class Interaction(object):
     def __init__(self, _exp, _res):
@@ -18,6 +20,7 @@ class Interaction(object):
     def __repr__(self):
         return self.label
 
+
 class InteractionV(Interaction):
     """Interaction with valence
     """
@@ -27,4 +30,3 @@ class InteractionV(Interaction):
 
     def __repr__(self):
         return self.label + "," + self.valence
-    
